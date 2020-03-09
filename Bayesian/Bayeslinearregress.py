@@ -1,24 +1,30 @@
+# %%
 import numpy as np
 from matplotlib import pyplot as plt
 import matplotlib.mlab as mlab
 
+# %%
 def bivariate_normal(x_seq, y_seq, mu, S):
     return mlab.bivariate_normal(x_seq, y_seq, S[0,0] ** (0.5), S[1,1] ** (0.5), mu[0], mu[1], S[0, 1])
 
+# %%
 def plot_data(ax, X, T):
     ax.set_xlim(-1, 1), ax.set_ylim(-1, 1)
     ax.scatter(X, T, color = 'b')
 
+# %%
 def plot_heatmap(ax, Z, x_seq, y_seq):
     ax.set_xlim(-1, 1), ax.set_ylim(-1, 1)
     ax.pcolor(x_seq, y_seq, Z, cmap=plt.cm.jet)
 
+# %%
 def plot_line(ax, W, seq):
     ax.set_xlim(-1, 1), ax.set_ylim(-1, 1)
     for _w in W:
         ax.plot(seq, _w.dot(np.vstack((np.ones(seq.size), seq))), color = 'r')
 
 
+# %%
 if __name__ == "__main__":
     # init
     w = np.array([-0.3, 0.5])
