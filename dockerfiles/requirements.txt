@@ -1,0 +1,14 @@
+optuna
+urllib3
+# for crypto
+ccxt
+investpy==0.9.14
+# for deep learning
+torch==1.6.0
+torchvision
+# for jupyter notebook
+jupyterlab==2.0.0
+autopep8
+black==18.9b0
+yapf
+jupyterlab_code_formatter
