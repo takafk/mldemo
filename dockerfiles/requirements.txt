@@ -7,7 +7,7 @@ investpy==0.9.14
 torch==1.6.0
 torchvision
 # for jupyter notebook
-jupyterlab==2.0.0
+jupyterlab==2.2.10
 autopep8
 black==18.9b0
 yapf
